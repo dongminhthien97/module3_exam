@@ -1,84 +1,70 @@
 package com.example.module3_exam.model;
 
-import java.time.LocalDate;
+import java.math.BigDecimal;
 
 public class Product {
-    private String productId;
-    private String productName;
-    private String unit;
-    private int price;
-    private Category category;
-    private LocalDate harvestDate;
+    private int id;
+    private String name;
+    private double price;
+    private BigDecimal discount;
+    private int stock;
 
-    public Product() {}
-
-    public Product(String productId, String productName, String unit, int price,
-                   Category category, LocalDate harvestDate) {
-        this.productId = productId;
-        this.productName = productName;
-        this.unit = unit;
+    public Product(int id, String name, double price, BigDecimal discount, int stock) {
+        this.id = id;
+        this.name = name;
         this.price = price;
-        this.category = category;
-        this.harvestDate = harvestDate;
+        this.discount = discount;
+        this.stock = stock;
     }
 
-    public String getProductId() {
-        return productId;
+    public int getId() {
+        return id;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getName() {
+        return name;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getUnit() {
-        return unit;
-    }
-
-    public void setUnit(String unit) {
-        this.unit = unit;
-    }
-
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public Category getCategory() {
-        return category;
+    public BigDecimal getDiscount() {
+        return discount;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setDiscount(BigDecimal discount) {
+        this.discount = discount;
     }
 
-    public LocalDate getHarvestDate() {
-        return harvestDate;
+    public int getStock() {
+        return stock;
     }
 
-    public void setHarvestDate(LocalDate harvestDate) {
-        this.harvestDate = harvestDate;
+    public void setStock(int stock) {
+        this.stock = stock;
     }
 
     @Override
     public String toString() {
         return "Product{" +
-                "productId='" + productId + '\'' +
-                ", productName='" + productName + '\'' +
-                ", unit='" + unit + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", price=" + price +
-                ", category=" + category +
-                ", harvestDate=" + harvestDate +
+                ", discount=" + discount +
+                ", stock=" + stock +
                 '}';
     }
 }
